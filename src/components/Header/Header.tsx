@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import './header.css';
+import './Header.css';
 
 type HeaderProps = {
   onLanguageChange: (lang: string) => void;
