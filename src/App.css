@@ -3,7 +3,11 @@ html, body, .App {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(-45deg, #4c468b, #05031a); 
+  background: linear-gradient(-45deg, #958ee2, #05031a); 
+}
+
+[dir="rtl"] body {
+  text-align: right;
 }
 
 :root {  
@@ -14,7 +18,8 @@ html, body, .App {
   flex: 1;
   font-family: sans-serif;
   color: var(--offwhite);  
-  background: linear-gradient(-45deg, #4c468b, #05031a);  
+
+  background-color: red;
 }
 
 .main-content {

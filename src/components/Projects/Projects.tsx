@@ -1,17 +1,23 @@
 import React from 'react';
-import './Projects.css'; // or './Projects.scss'
+import ProjectCard from './ProjectCard';
+import projectsData from './projectsData';
+
+import './Projects.css';
 
 const Projects: React.FC = () => {
   return (
-    <section className="projects">
-      <h2>Projects</h2>
-      <div className="project-list">
-        {/* Replace with actual projects */}
-        <div className="project-item">
-          <h3>Project Title</h3>
-          <p>Project description goes here...</p>
-        </div>
-        {/* Add more project items here */}
+    <section className="projects-section">
+      <div className="projects-list">
+        {projectsData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            techStack={project.techStack}
+            imageUrl={project.imageUrl}
+            link={project.link}
+          />
+        ))}
       </div>
     </section>
   );

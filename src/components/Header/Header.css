@@ -33,12 +33,11 @@
 }
 
 .header__nav-item a:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* Stronger background color */
-  color: white; /* Ensures text color remains white */
-  border-color: rgba(255, 255, 255, 0.3); /* Optional: change border color on hover */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white; 
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Shake animation keyframes */
 @keyframes shake {
   0% { transform: translateX(0); }
   25% { transform: translateX(-2px); }
@@ -53,7 +52,6 @@
 
 .header__language {
   display: flex;
-  margin-left: 50px;
 }
 
 .header__language-btn {
@@ -66,4 +64,49 @@
 
 .header__language-btn:hover {
   transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    gap: 10px;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__nav-list {
+    gap: 4px;
+  }
+
+  .header__nav-item a {
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .header__language {
+    display: flex;
+  }
+
+  .header__language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+  }
+
+  .header__language-btn:hover {
+    transform: scale(1.5);
+  }
 }

@@ -1,14 +1,21 @@
 import React from 'react';
-import './About.css'; // or './About.scss'
+import './About.css';
+
+
+import { useTranslation } from 'react-i18next';
+import cv from '../../assets/pdf_files/MatanCV.pdf';
 
 const About: React.FC = () => {
+  const {t} = useTranslation();
   return (
-    <section className="about">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate full-stack developer with experience in creating responsive and dynamic web applications.
-        My goal is to transform ideas into reality through efficient and scalable code.
-      </p>
+    <section className="about-section">
+      <embed src={`${cv}#toolbar=0`} type="application/pdf" width="70%" height="600px" />
+
+      <div className="download-button">
+        <a href={cv} download="Matan_Balestra_Resume.pdf">
+          {t('downloadResume')}
+        </a>
+      </div>
     </section>
   );
 };

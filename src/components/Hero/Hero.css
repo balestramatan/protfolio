@@ -8,14 +8,14 @@
 }
 
 .hero-content {
-  display: flex; /* Use flexbox to align items horizontally */
-  align-items: center; /* Center items vertically within the flex container */
-  gap: 5em; /* Adds gap between text and image */
+  display: flex;
+  align-items: center;
+  gap: 5em; 
 }
 
 .hero-text {
-  max-width: 700px; /* Adjust as needed */
-  text-align: center; /* Align text to the left */
+  max-width: 700px;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -31,11 +31,54 @@
 }
 
 .hero-image {
-  max-width: 300px; /* Adjust width as needed */
+  max-width: 400px;
 }
 
 .hero-image img {
-  width: 100%; /* Ensures image scales within container */
-  border-radius: 50%; /* Optional: make the image circular */
-  object-fit: cover; /* Ensures image covers container without distortion */
+  width: 100%;
+  border-radius: 30%; 
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .hero-text {
+    max-width: unset;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    white-space: unset;
+  }
+
+  .hero-text p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+
+  .hero-image img {
+    width: 70%;
+    border-radius: 30%; 
+  }
 }

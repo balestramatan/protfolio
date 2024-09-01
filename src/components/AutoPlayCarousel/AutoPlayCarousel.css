@@ -11,6 +11,7 @@
   width: 100%;
   overflow: hidden;
   margin-top: 4em;
+  direction: ltr;
 }
 
 .looper__innerList {
@@ -34,17 +35,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
   margin: 10px;
   padding: 16px; 
-  font-weight: 600;
-  text-align: center;
   border-radius: 16px;
 }
 
 .contentBlock--one {  
-  width: 120px;
+  width: 140px;
   background: rgba(255, 255, 255, 0.05);    
   font-weight: 600;
-  font-size: 18px; 
+  font-size: 60px; 
 }

@@ -8,13 +8,20 @@ import Projects from './components/Projects/Projects';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
+import { useMediaQuery } from 'react-responsive';
 import './App.css';
+import TabletOrMobileHeader from './components/Header/TabletOrMobileHeader';
+import ToastComponent from './components/Toast/Toast';
+import useLanguage from './hooks/useLanguage';
 
 const App: React.FC = () => {
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 800px)' })
+  
+  const { changeLanguage } = useLanguage();
   return (
     <Router>
       <div className="App">
-        <Header onLanguageChange={() => {}}/>
+        {isDesktopOrLaptop ? <Header onLanguageChange={changeLanguage}/> : <TabletOrMobileHeader onLanguageChange={changeLanguage}/> }
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Hero />} />
@@ -25,6 +32,7 @@ const App: React.FC = () => {
         </div>
         <Footer />
       </div>
+      <ToastComponent />
     </Router>
   );
 };

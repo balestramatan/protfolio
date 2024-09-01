@@ -1,15 +1,22 @@
-.about {
-  padding: 60px 20px;
+.about-section {
   text-align: center;
-  background: #ffffff;
+  width: 100%;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.download-button {
+  margin-top: 20px;
 }
 
-.about p {
-  font-size: 1.2rem;
-  color: #555;
+.download-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-button a:hover {
+  background-color: #45a049;
 }
