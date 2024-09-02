@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
           <li className="header__nav-item" onClick={() => navigate('/')}><a>{t('home')}</a></li>
           <li className="header__nav-item" onClick={() => navigate('about')}><a>{t('about')}</a></li>
           <li className="header__nav-item" onClick={() => navigate('projects')}><a>{t('projects')}</a></li>
-          <li className="header__nav-item" onClick={() => navigate('contacts')}><a>{t('contact')}</a></li>
+          <li className="header__nav-item" onClick={() => navigate('contact')}><a>{t('contact')}</a></li>
         </ul>
       </nav>
       <div className="header__language">
