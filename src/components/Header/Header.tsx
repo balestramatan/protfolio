@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 type HeaderProps = {
@@ -9,15 +9,16 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
   const {t} = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <header className="header">
       <nav className="header__nav">
         <ul className="header__nav-list">
-          <li className="header__nav-item"><Link to="/">{t('home')}</Link></li>
-          <li className="header__nav-item"><Link to="/about">{t('about')}</Link></li>
-          <li className="header__nav-item"><Link to="/projects">{t('projects')}</Link></li>
-          <li className="header__nav-item"><Link to="/contact">{t('contact')}</Link></li>
+          <li className="header__nav-item" onClick={() => navigate('/')}><a>{t('home')}</a></li>
+          <li className="header__nav-item" onClick={() => navigate('about')}><a>{t('about')}</a></li>
+          <li className="header__nav-item" onClick={() => navigate('projects')}><a>{t('projects')}</a></li>
+          <li className="header__nav-item" onClick={() => navigate('contacts')}><a>{t('contact')}</a></li>
         </ul>
       </nav>
       <div className="header__language">
