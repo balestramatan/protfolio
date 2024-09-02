@@ -18,7 +18,7 @@ const TabletOrMobileHeader: React.FC<HeaderProps> = ({ onLanguageChange }) => {
 
   return (
     <header className="header">
-      <Hamburger toggled={isOpen} toggle={setOpen} />
+      <Hamburger toggled={isOpen} toggle={setOpen} size={14}/>
       <div className="header__container">
         {isOpen && (
           <nav className={`header__nav`}>
@@ -51,11 +51,15 @@ const TabletOrMobileHeader: React.FC<HeaderProps> = ({ onLanguageChange }) => {
               >
                   <a>{t('contact')}</a>
               </li>
+              <li className="header__nav-item">
+                  <button className="header__language-btn" onClick={() => onLanguageChange('en')}>🇺🇸</button>
+                  <button className="header__language-btn" onClick={() => onLanguageChange('he')}>🇮🇱</button>
+              </li>
             </ul>
-            <div className="header__language">
+            {/* <div className="header__language">
               <button className="header__language-btn" onClick={() => onLanguageChange('en')}>🇺🇸</button>
               <button className="header__language-btn" onClick={() => onLanguageChange('he')}>🇮🇱</button>
-            </div>
+            </div> */}
           </nav>
         )}
       </div>
