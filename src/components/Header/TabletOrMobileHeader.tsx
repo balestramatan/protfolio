@@ -1,7 +1,7 @@
 import Hamburger from 'hamburger-react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 type HeaderProps = {
@@ -11,6 +11,10 @@ type HeaderProps = {
 const TabletOrMobileHeader: React.FC<HeaderProps> = ({ onLanguageChange }) => {
   const [isOpen, setOpen] = useState(false);
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+
+  const nevigateToPage = (page: string) => navigate(page);
 
   return (
     <header className="header">
@@ -19,17 +23,33 @@ const TabletOrMobileHeader: React.FC<HeaderProps> = ({ onLanguageChange }) => {
         {isOpen && (
           <nav className={`header__nav`}>
             <ul className="header__nav-list">
-              <li className="header__nav-item">
-                <Link to="/" onClick={() => setOpen(false)}>{t('home')}</Link>
+              <li className="header__nav-item" onClick={() => { 
+                setOpen(false) 
+                nevigateToPage('/') 
+                }}
+              >
+                  <a>{t('home')}</a>
               </li>
-              <li className="header__nav-item">
-                <Link to="/about" onClick={() => setOpen(false)}>{t('about')}</Link>
+              <li className="header__nav-item" onClick={() => {
+                setOpen(false)
+                nevigateToPage('/about') 
+                }}
+              >
+                  <a>{t('about')}</a>
               </li>
-              <li className="header__nav-item">
-                <Link to="/projects" onClick={() => setOpen(false)}>{t('projects')}</Link>
+              <li className="header__nav-item" onClick={() => {
+                setOpen(false)
+                nevigateToPage('/projects') 
+                }}
+              >
+                  <a>{t('projects')}</a>
               </li>
-              <li className="header__nav-item">
-                <Link to="/contact" onClick={() => setOpen(false)}>{t('contact')}</Link>
+              <li className="header__nav-item" onClick={() => {
+                setOpen(false)
+                nevigateToPage('/contact') 
+                }}
+              >
+                  <a>{t('contact')}</a>
               </li>
             </ul>
             <div className="header__language">
