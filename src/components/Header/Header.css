@@ -74,7 +74,7 @@
     position: sticky; /* Makes the header sticky */
     top: 0; /* Sticks the header to the top of the viewport */
     z-index: 1000; /* Ensures the header is above other content */
-    background-color: #615c93;
+    background-color: #c8c6de;
   }
 
   .header__nav {

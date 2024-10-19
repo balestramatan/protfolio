@@ -14,7 +14,7 @@ const Layout: React.FC = () => {
   const { changeLanguage } = useLanguage();
 
   return (
-    <div className='App'>
+    <div id="app-root" className='app'>
       {isDesktopOrLaptop ? (
         <Header onLanguageChange={changeLanguage} />
       ) : (

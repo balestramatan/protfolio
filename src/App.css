@@ -1,23 +1,23 @@
-html, body, .App {
+html, body, .app {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(-45deg, #ffffff, #d0d0f7, #8c8cf7); 
+  background: linear-gradient(-45deg, #ffffff, #ebebf9, #d6d6f5); 
+}
+
+.dark-mode {
+  background: linear-gradient(-45deg, #1a1a1a, #333333, #4d4d4d);
+  color: rgb(221, 212, 212);
 }
 
 [dir="rtl"] body {
   text-align: right;
 }
 
-:root {  
-  --offblack: #120101;
-}
-
 #root {
   flex: 1;
   font-family: sans-serif;
-  color: var(--offblack);  
 }
 
 .main-content {

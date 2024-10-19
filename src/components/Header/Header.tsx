@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+
 import './Header.css';
 
 type HeaderProps = {
@@ -13,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
 
   return (
     <header className="header">
+      <ThemeToggle />
       <nav className="header__nav">
         <ul className="header__nav-list">
           <li className="header__nav-item" onClick={() => navigate('/')}><a>{t('home')}</a></li>

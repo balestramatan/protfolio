@@ -1,0 +1,12 @@
+.toggle-container {
+    display: flex;
+  }
+  
+  .dark-toggle {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  .toggle-icon {
+    font-size: 1.5rem;
+  }
