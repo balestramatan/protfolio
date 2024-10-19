@@ -2,7 +2,6 @@ import emailjs from 'emailjs-com';
 import React, { useState } from 'react';
 import toastUtilInstance from '../../helpers/toastify';
 
-import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -11,8 +10,6 @@ const Contact: React.FC = () => {
     email: '',
     message: '',
   });
-
-  const {t} = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {    
     const { name, value } = e.target;
