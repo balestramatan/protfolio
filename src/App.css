@@ -3,7 +3,7 @@ html, body, .App {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(-45deg, #958ee2, #05031a); 
+  background: linear-gradient(-45deg, #ffffff, #d0d0f7, #8c8cf7); 
 }
 
 [dir="rtl"] body {
@@ -11,13 +11,13 @@ html, body, .App {
 }
 
 :root {  
-  --offwhite: #EBEBEB;
+  --offblack: #120101;
 }
 
 #root {
   flex: 1;
   font-family: sans-serif;
-  color: var(--offwhite);  
+  color: var(--offblack);  
 }
 
 .main-content {

@@ -36,30 +36,30 @@ const Contact: React.FC = () => {
   return (
     <section className="contact-section">
       <form className="contact-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">{t('name')}</label>
         <input
           type="text"
           id="from_name"
           name="from_name"
+          placeholder='Name'
           value={formData.from_name}
           onChange={handleChange}
           required
         />
 
-        <label htmlFor="email">{t('email')}</label>
         <input
           type="email"
           id="email"
           name="email"
+          placeholder='Email'
           value={formData.email}
           onChange={handleChange}
           required
         />
 
-        <label htmlFor="message">{t('message')}</label>
         <textarea
           id="message"
           name="message"
+          placeholder='Message'
           value={formData.message}
           onChange={handleChange}
           maxLength={300}
