@@ -8,9 +8,7 @@ export const AppProvider = ({children}: {children: any}) => {
     const toggleDarkTheme = () => {
         setIsDarkTheme(!isDarkTheme);
         const classes = document.getElementById('app-root')?.classList;
-        if (classes) {
-            classes.toggle('dark-mode');
-        }
+        if (classes) classes.toggle('dark-mode');
     }
 
     return <AppContext.Provider value={{isDarkTheme, toggleDarkTheme }}>{children}</AppContext.Provider>
